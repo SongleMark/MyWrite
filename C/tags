@@ -1,0 +1,195 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AI	五子棋.c	/^void AI(int *p,int *q)           \/* 电脑下子 *p *q返回下子坐标 *\/$/;"	f
+BLACK	rb_tree.h	/^        enum COLOR{RED,BLACK};$/;"	e	enum:RB_Tree::COLOR
+COLOR	rb_tree.h	/^        enum COLOR{RED,BLACK};$/;"	g	class:RB_Tree
+COM	五子棋.c	6;"	d	file:
+CreateGraph	rb_tree.h	/^   void CreateGraph(string filename)  $/;"	f	class:RB_Tree
+CreateNodeLink	test/2_双链表操作.c	/^void CreateNodeLink(NODE **head) {$/;"	f
+CreateStudentInfoLink	test/1_单链表操作.c	/^void CreateStudentInfoLink(STUDENTINFO **head) {$/;"	f
+Create_Stu	stu.c	/^Stu_Info *Create_Stu()$/;"	f
+DelNode	stu.c	/^Stu_Info *DelNode(Stu_Info *head, int id)$/;"	f
+DelSpaceFromString	1字符串/delspace.c	/^void DelSpaceFromString(char *str) {$/;"	f
+Delete	rb_tree.h	/^        bool Delete(KEY key)$/;"	f	class:RB_Tree
+DeleteFixUp	rb_tree.h	/^void DeleteFixUp(RB_Node* node)  $/;"	f	class:RB_Tree
+DeleteNodeInfoByData	test/2_双链表操作.c	/^void DeleteNodeInfoByData(NODE **head, int data) {$/;"	f
+DeleteSpaceFromString	test/3_字符串操作.c	/^void DeleteSpaceFromString(char *str) {$/;"	f
+DeleteStudentInfoByID	test/1_单链表操作.c	/^void DeleteStudentInfoByID(STUDENTINFO **head, int id) {$/;"	f
+DirectionValue	五子棋.c	/^static int DirectionValue( int * piX, int * piY, int iDirection ){$/;"	f	file:
+Empty	rb_tree.h	/^        bool Empty()const$/;"	f	class:RB_Tree
+GetSize	sizeof.c	/^void GetSize(char array[100])$/;"	f
+Getmemory	test/facetest.c	/^char Getmemory() {$/;"	f
+INFO	test/5_文件操作.c	/^} INFO;$/;"	t	typeref:struct:info	file:
+InOrderCreate	rb_tree.h	/^   void InOrderCreate(ofstream& file,RB_Node* node)  $/;"	f	class:RB_Tree
+InOrderPredecessor	rb_tree.h	/^  inline RB_Node* InOrderPredecessor(RB_Node* node)  $/;"	f	class:RB_Tree
+InOrderSuccessor	rb_tree.h	/^   inline RB_Node* InOrderSuccessor(RB_Node* node)  $/;"	f	class:RB_Tree
+InOrderTraverse	rb_tree.h	/^   void InOrderTraverse()  $/;"	f	class:RB_Tree
+InOrderTraverse	rb_tree.h	/^   void InOrderTraverse(RB_Node* node)  $/;"	f	class:RB_Tree
+InitGame	五子棋.c	/^void InitGame(){$/;"	f
+Insert	rb_tree.h	/^        bool Insert(KEY key, U date)$/;"	f	class:RB_Tree
+InsertFixup	rb_tree.h	/^        void InsertFixup(RB_Node* node)$/;"	f	class:RB_Tree
+IntToString	1字符串/numtostr.c	/^void IntToString(int num, char *str) {$/;"	f
+L	小小算法.c	338;"	d	file:
+M	小小算法.c	337;"	d	file:
+M	小小算法.c	400;"	d	file:
+MAN	五子棋.c	5;"	d	file:
+MainInterFace	test/3_字符串操作.c	/^void MainInterFace() {$/;"	f
+MakePiece	五子棋.c	/^void MakePiece( ScmPiece * pScmPiece, int iGameFlag ){$/;"	f
+Maximum	rb_tree.h	/^RB_Node*Maximum(RB_Node*node)$/;"	f	class:RB_Tree
+Minmum	rb_tree.h	/^RB_Node*Minmum(RB_Node*node)$/;"	f	class:RB_Tree
+N	小小算法.c	307;"	d	file:
+N	小小算法.c	339;"	d	file:
+N	小小算法.c	365;"	d	file:
+N	小小算法.c	399;"	d	file:
+NODE	test/2_双链表操作.c	/^} NODE;$/;"	t	typeref:struct:node	file:
+NODE	test/5_struct.c	/^} NODE;$/;"	t	typeref:struct:Node	file:
+Node	test/5_struct.c	/^typedef struct Node {$/;"	s	file:
+ORDEX	五子棋.c	8;"	d	file:
+RB_COLOR	rb_tree.h	/^                  COLOR RB_COLOR;$/;"	m	class:RB_Tree::RB_Node
+RB_Node	rb_tree.h	/^                RB_Node():left(NULL),right(NULL),parent(NULL){}$/;"	f	class:RB_Tree::RB_Node
+RB_Node	rb_tree.h	/^        class RB_Node$/;"	c	class:RB_Tree
+RB_TREE_H	rb_tree.h	2;"	d
+RB_Tree	rb_tree.h	/^        RB_Tree():m_nullNode(new RB_Node),m_root(m_nullNode){}$/;"	f	class:RB_Tree
+RB_Tree	rb_tree.h	/^        RB_Tree(const RB_Tree& input){}  $/;"	f	class:RB_Tree
+RB_Tree	rb_tree.h	/^class RB_Tree$/;"	c
+RED	rb_tree.h	/^        enum COLOR{RED,BLACK};$/;"	e	enum:RB_Tree::COLOR
+RecvSignal	2系统编程/fifo_read.c	/^void RecvSignal(int sig) {$/;"	f
+Reserve_StuList	stu.c	/^Stu_Info *Reserve_StuList(Stu_Info *head)$/;"	f
+ReverseString	1字符串/numtostr.c	/^void ReverseString(char *str) {$/;"	f
+ReverseString	1字符串/reservestr.c	/^void ReverseString(char *str) {$/;"	f
+ReverseString	test/3_字符串操作.c	/^void ReverseString(char *str) {$/;"	f
+ReverseString	test/reverse.c	/^void ReverseString(char *str) {$/;"	f
+ReverseString	test/test.c	/^void ReverseString(char *str) {$/;"	f
+ReverseStudentInfoLink	test/1_单链表操作.c	/^STUDENTINFO *ReverseStudentInfoLink(STUDENTINFO *head) {$/;"	f
+RotateLeft	rb_tree.h	/^        bool RotateLeft(RB_Node *node)$/;"	f	class:RB_Tree
+RotateRight	rb_tree.h	/^        bool RotateRight(RB_Node *node)$/;"	f	class:RB_Tree
+SIZE	2系统编程/fifo_read.c	/^const int SIZE = 1024;$/;"	v
+SIZE	2系统编程/fifo_write.c	11;"	d	file:
+SPA	五子棋.c	4;"	d	file:
+STUDENTINFO	test/1_单链表操作.c	/^} STUDENTINFO;$/;"	t	typeref:struct:StudentInfo	file:
+ScmPiece	五子棋.c	/^}ScmPiece;$/;"	t	typeref:struct:__anon1	file:
+ShowNodeInfoLink	test/2_双链表操作.c	/^void ShowNodeInfoLink(NODE *head) {$/;"	f
+ShowStudentInfo	test/1_单链表操作.c	/^void ShowStudentInfo(STUDENTINFO *head) {$/;"	f
+Show_stuinfo	stu.c	/^void Show_stuinfo(Stu_Info *head)$/;"	f
+SortString	1字符串/sortstr.c	/^void SortString(char *str) {$/;"	f
+Strcat	1字符串/strcat.c	/^void Strcat(char *dest, const char *src) {$/;"	f
+Strcat	test/3_字符串操作.c	/^void Strcat(char *dest, const char *src) {$/;"	f
+Strcat	test/strcat.c	/^void Strcat(char *dest, const char *src) {$/;"	f
+Strcmp	1字符串/strcmp.c	/^int Strcmp(const char *s1, const char *s2) {$/;"	f
+Strcpy	1字符串/strcpy.c	/^void Strcpy(char *dest, const char *src) {	$/;"	f
+Strcpy	test/3_字符串操作.c	/^void Strcpy(char *dest, const char *src) {$/;"	f
+Strcpy	test/strcpy.c	/^void Strcpy(char *dest, const char *src) {$/;"	f
+Strlen	1字符串/delspace.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	1字符串/numtostr.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	1字符串/reservestr.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	1字符串/sortstr.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	1字符串/strcat.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	1字符串/strcmp.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	test/3_字符串操作.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	test/reverse.c	/^int Strlen(const char *str) {$/;"	f
+Strlen	test/strcat.c	/^int Strlen(const char *src) {$/;"	f
+Strlen	test/strcpy.c	/^int Strlen(const char *src) {$/;"	f
+Strncat	1字符串/strcat.c	/^void Strncat(char *dest, const char *src, size_t n) {$/;"	f
+Strncmp	1字符串/strcmp.c	/^int Strncmp(const char *s1, const char *s2, size_t n) {$/;"	f
+Strncpy	1字符串/strcpy.c	/^void Strncpy(char *dest, const char *src, size_t n) {$/;"	f
+Stu_Info	stu.c	/^}Stu_Info;$/;"	t	typeref:struct:Student	file:
+Student	stu.c	/^typedef struct Student$/;"	s	file:
+StudentInfo	test/1_单链表操作.c	/^typedef struct StudentInfo {$/;"	s	file:
+SubVictory	五子棋.c	/^static int SubVictory( ScmPiece * pScmPiece, int iDirection ){$/;"	f	file:
+TransformIntToString	test/test.c	/^char *TransformIntToString(int number, char *str) {$/;"	f
+Transplant	rb_tree.h	/^         bool Transplant(RB_Node*U,RB_Node*V)$/;"	f	class:RB_Tree
+Victory	五子棋.c	/^int Victory( ScmPiece * pScmPiece )      \/* 判断胜利 p q为判断点坐标，胜利返回1，否则返回0 *\/$/;"	f
+_mIsStop	test/1_单链表操作.c	/^static int _mIsStop = 0;$/;"	v	file:
+_mIsStop	test/2_双链表操作.c	/^int _mIsStop = 0;$/;"	v
+_mIsStop	test/3_字符串操作.c	/^static int _mIsStop = 0;$/;"	v	file:
+_mNum	test/1_单链表操作.c	/^static int _mNum = 10001;$/;"	v	file:
+buf	test/5_文件操作.c	/^	char buf[32];$/;"	m	struct:info	file:
+ch1	小小算法.c	/^void ch1(int a[N][N])$/;"	f
+ch2	小小算法.c	/^void ch2(int a[N][N])$/;"	f
+clear	rb_tree.h	/^                void clear(RB_Node* node)  $/;"	f	class:RB_Tree
+data	test/2_双链表操作.c	/^	int data;$/;"	m	struct:node	file:
+date	rb_tree.h	/^                  U date;$/;"	m	class:RB_Tree::RB_Node
+draw	五子棋.c	/^void draw() \/* 画棋盘 *\/$/;"	f
+fac	小小算法.c	/^int fac(int n)$/;"	f
+find	rb_tree.h	/^        RB_Node*find(KEY key)$/;"	f	class:RB_Tree
+fsqrt	小小算法.c	/^float fsqrt(float a)$/;"	f
+g_ScmGame1	五子棋.c	/^ScmPiece g_ScmGame1, g_ScmGame2;$/;"	v
+g_ScmGame2	五子棋.c	/^ScmPiece g_ScmGame1, g_ScmGame2;$/;"	v
+g_iPieceLen	五子棋.c	/^int g_iPieceLen;$/;"	v
+hangle	2系统编程/fifo_write.c	/^void  hangle(int sig)$/;"	f
+iFlag	五子棋.c	/^        int iFlag;$/;"	m	struct:__anon1	file:
+iX	五子棋.c	/^        int iX, iY;$/;"	m	struct:__anon1	file:
+iY	五子棋.c	/^        int iX, iY;$/;"	m	struct:__anon1	file:
+id	stu.c	/^	int id;$/;"	m	struct:Student	file:
+id	test/1_单链表操作.c	/^	int id;$/;"	m	struct:StudentInfo	file:
+info	test/5_文件操作.c	/^typedef struct info {$/;"	s	file:
+insert	小小算法.c	/^void insert(int a[],int x)$/;"	f
+jiami	小小算法.c	/^char *jiami(char stri[])$/;"	f
+key	rb_tree.h	/^                  KEY key;$/;"	m	class:RB_Tree::RB_Node
+left	rb_tree.h	/^                  RB_Node*left;$/;"	m	class:RB_Tree::RB_Node
+mIsStop	2系统编程/fifo_read.c	/^int mIsStop = 0;$/;"	v
+mIsStop	2系统编程/fifo_write.c	/^int mIsStop = 0;$/;"	v
+m_nullNode	rb_tree.h	/^        RB_Node* m_nullNode;$/;"	m	class:RB_Tree
+m_root	rb_tree.h	/^        RB_Node*m_root; $/;"	m	class:RB_Tree
+main	1字符串/delspace.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/numtostr.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/reservestr.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/sortstr.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/strcat.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/strcmp.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	1字符串/strcpy.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	2系统编程/fifo_read.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	2系统编程/fifo_write.c	/^int main()$/;"	f
+main	rand.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	sizeof.c	/^int main()$/;"	f
+main	stu.c	/^int main(int argc,char **argv)$/;"	f
+main	test.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/1_单链表操作.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/2_双链表操作.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/3_字符串操作.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/4_Sizeof.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/5_float.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/5_struct.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/5_文件操作.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/6_i++.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/7_百钱百鸡.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/8_公约公倍数.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/9_润年.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/facetest.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/rand.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/reverse.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/strcat.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/strcpy.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/test.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	test/tolower.c	/^int main(int argc, char *argv[]) {$/;"	f
+main	五子棋.c	/^void main()$/;"	f
+main	小小算法.c	/^main()$/;"	f
+main	小小算法.c	/^void main()$/;"	f
+min	小小算法.c	/^void min(int a[M][N])$/;"	f
+mv	小小算法.c	/^void mv(int a[M][L], int b[L][N], int c[M][N])$/;"	f
+name	stu.c	/^	char name[32];$/;"	m	struct:Student	file:
+name	test/1_单链表操作.c	/^	char name[32];$/;"	m	struct:StudentInfo	file:
+name	test/5_文件操作.c	/^	char name[32];$/;"	m	struct:info	file:
+next	stu.c	/^	struct Student *next;$/;"	m	struct:Student	typeref:struct:Student::Student	file:
+next	test/1_单链表操作.c	/^	struct StudentInfo *next;$/;"	m	struct:StudentInfo	typeref:struct:StudentInfo::StudentInfo	file:
+next	test/2_双链表操作.c	/^	struct node *next;$/;"	m	struct:node	typeref:struct:node::node	file:
+node	test/2_双链表操作.c	/^typedef struct node {$/;"	s	file:
+num	test/5_文件操作.c	/^	int num;$/;"	m	struct:info	file:
+operator =	rb_tree.h	/^        const RB_Tree& operator=(const RB_Tree& input){} $/;"	f	class:RB_Tree
+parent	rb_tree.h	/^                  RB_Node*parent;$/;"	m	class:RB_Tree::RB_Node
+pre	test/2_双链表操作.c	/^	struct node *pre;$/;"	m	struct:node	typeref:struct:node::node	file:
+prime	小小算法.c	/^int prime(int m)$/;"	f
+qipan	五子棋.c	/^int qipan[ORDEX][ORDEX];    \/* 15*15的棋盘 *\/$/;"	v
+qixing	五子棋.c	/^int qixing(int n,int p,int q)            \/* 返回空点p q在n方向上的棋型号 n为1-8方向 从右顺时针开始数 *\/ $/;"	f
+right	rb_tree.h	/^                  RB_Node*right;$/;"	m	class:RB_Tree::RB_Node
+score	stu.c	/^	float score;$/;"	m	struct:Student	file:
+score	test/1_单链表操作.c	/^	double score;$/;"	m	struct:StudentInfo	file:
+start	五子棋.c	/^void start()$/;"	f
+trdec	小小算法.c	/^char *trdec(int idec, int ibase)$/;"	f
+value	五子棋.c	/^int value(int p,int q) \/* 计算空点p q的价值 以k返回 *\/ $/;"	f
+yiwei	五子棋.c	/^void yiwei(int n,int *i,int *j)        \/* 在n方向上对坐标 i j 移位 n为1-8方向 从右顺时针开始数 *\/$/;"	f
+~RB_Tree	rb_tree.h	/^   ~RB_Tree()  $/;"	f	class:RB_Tree

@@ -1,0 +1,201 @@
+函数名与函数指针
+
+一 通常的函数调用
+    一个通常的函数调用的例子：
+//自行包含头文件
+void MyFun(int x);    //此处的申明也可写成：void MyFun( int );
+
+int main(int argc, char* argv[])
+{
+      MyFun(10);     //这里是调用MyFun(10);函数
+
+      return 0;
+}
+
+void MyFun(int x)  //这里定义一个MyFun函数
+{
+   printf(“%d\n”,x);
+}
+    这个MyFun函数是一个无返回值的函数，它并不完成什么事情。这种调用函数的格式你应该是很熟悉的吧！看主函数中调用MyFun函数的书写格式：
+MyFun(10);
+    我们一开始只是从功能上或者说从数学意义上理解MyFun这个函数，知道MyFun函数名代表的是一个功能（或是说一段代码）。
+    直到——
+    学习到函数指针概念时。我才不得不在思考：函数名到底又是什么东西呢？
+    （不要以为这是没有什么意义的事噢！呵呵，继续往下看你就知道了。）
+
+二 函数指针变量的申明
+    就象某一数据变量的内存地址可以存储在相应的指针变量中一样，函数的首地址也以存储在某个函数指针变量里的。这样，我就可以通过这个函数指针变量来调用所指向的函数了。
+    在C系列语言中，任何一个变量，总是要先申明，之后才能使用的。那么，函数指针变量也应该要先申明吧？那又是如何来申明呢？以上面的例子为例，我来申明一个可以指向MyFun函数的函数指针变量FunP。下面就是申明FunP变量的方法：
+void (*FunP)(int) ;   //也可写成void (*FunP)(int x);
+    你看，整个函数指针变量的申明格式如同函数MyFun的申明处一样，只不过——我们把MyFun改成（*FunP）而已，这样就有了一个能指向MyFun函数的指针FunP了。（当然，这个FunP指针变量也可以指向所有其它具有相同参数及返回值的函数了。）
+
+三 通过函数指针变量调用函数
+    有了FunP指针变量后，我们就可以对它赋值指向MyFun，然后通过FunP来调用MyFun函数了。看我如何通过FunP指针变量来调用MyFun函数的：
+//自行包含头文件
+void MyFun(int x);    //这个申明也可写成：void MyFun( int );
+void (*FunP)(int );   //也可申明成void(*FunP)(int x)，但习惯上一般不这样。
+
+int main(int argc, char* argv[])
+{
+   MyFun(10);     //这是直接调用MyFun函数
+   FunP=&MyFun;  //将MyFun函数的地址赋给FunP变量
+   (*FunP)(20);    //这是通过函数指针变量FunP来调用MyFun函数的。
+}
+
+void MyFun(int x)  //这里定义一个MyFun函数
+{
+   printf(“%d\n”,x);
+}
+    请看黑体字部分的代码及注释。
+    运行看看。嗯，不错，程序运行得很好。
+    哦，我的感觉是：MyFun与FunP的类型关系类似于int 与int *的关系。函数MyFun好像是一个如int的变量（或常量），而FunP则像一个如int *一样的指针变量。
+int i,*pi;
+pi=&i;    //与FunP=&MyFun比较。
+    （你的感觉呢？）
+    呵呵，其实不然——
+
+四 调用函数的其它书写格式
+函数指针也可如下使用，来完成同样的事情：
+//自行包含头文件
+void MyFun(int x);   
+void (*FunP)(int );    //申明一个用以指向同样参数，返回值函数的指针变量。
+
+int main(int argc, char* argv[])
+{
+   MyFun(10);     //这里是调用MyFun(10);函数
+   FunP=MyFun;  //将MyFun函数的地址赋给FunP变量
+   FunP(20);    //这是通过函数指针变量来调用MyFun函数的。
+
+      return 0;
+}
+
+void MyFun(int x)  //这里定义一个MyFun函数
+{
+   printf(“%d\n”,x);
+}
+我改了黑体字部分（请自行与之前的代码比较一下）。
+运行试试，啊！一样地成功。
+咦？
+FunP=MyFun;
+可以这样将MyFun值同赋值给FunP，难道MyFun与FunP是同一数据类型（即如同的int 与int的关系），而不是如同int 与int*的关系了？（有没有一点点的糊涂了？）
+看来与之前的代码有点矛盾了，是吧！所以我说嘛！
+请容许我暂不给你解释，继续看以下几种情况（这些可都是可以正确运行的代码哟！）：
+代码之三：
+int main(int argc, char* argv[])
+{
+   MyFun(10);     //这里是调用MyFun(10);函数
+   FunP=&MyFun;  //将MyFun函数的地址赋给FunP变量
+   FunP(20);    //这是通过函数指针变量来调用MyFun函数的。
+
+      return 0;
+}
+代码之四：
+int main(int argc, char* argv[])
+{
+   MyFun(10);     //这里是调用MyFun(10);函数
+   FunP=MyFun;  //将MyFun函数的地址赋给FunP变量
+   (*FunP)(20);    //这是通过函数指针变量来调用MyFun函数的。
+
+      return 0;
+}
+真的是可以这样的噢！
+（哇！真是要晕倒了！）
+还有呐！看——
+int main(int argc, char* argv[])
+{
+   （*MyFun）(10);     //看，函数名MyFun也可以有这样的调用格式
+
+      return 0;
+}
+你也许第一次见到吧：函数名调用也可以是这样写的啊！（只不过我们平常没有这样书写罢了。）
+那么，这些又说明了什么呢？
+呵呵！假使我是“福尔摩斯”，依据以往的知识和经验来推理本篇的“新发现”，必定会由此分析并推断出以下的结论：
+1. 其实，MyFun的函数名与FunP函数指针都是一样的，即都是函数指针。MyFun函数名是一个函数指针常量，而FunP是一个函数数指针变量，这是它们的关系。
+2. 但函数名调用如果都得如(*MyFun)(10)；这样，那书写与读起来都是不方便和不习惯的。所以C语言的设计者们才会设计成又可允许MyFun(10);这种形式地调用（这样方便多了并与数学中的函数形式一样，不是吗？）。
+3. 为统一起见，FunP函数指针变量也可以FunP(10)的形式来调用。
+4. 赋值时，即可FunP=&MyFun形式，也可FunP=MyFun。
+上述代码的写法，随便你爱怎么着！
+请这样理解吧！这可是有助于你对函数指针的应用喽！
+最后——
+补充说明一点：在函数的申明处：
+void MyFun(int );    //不能写成void (*MyFun)(int )。
+void (*FunP)(int );   //不能写成void FunP(int )。
+（请看注释）这一点是要注意的。
+
+五 定义某一函数的指针类型：
+就像自定义数据类型一样，我们也可以先定义一个函数指针类型，然后再用这个类型来申明函数指针变量。
+我先给你一个自定义数据类型的例子。
+typedef int* PINT;    //为int* 类型定义了一个PINT的别名
+int main()
+{
+  int x;
+  PINT px=&x;   //与int * px=&x;是等价的。PINT类型其实就是int * 类型
+  *px=10;       //px就是int*类型的变量  
+  return 0;
+}
+根据注释，应该不难看懂吧！（虽然你可能很少这样定义使用，但以后学习Win32编程时会经常见到的。）
+下面我们来看一下函数指针类型的定义及使用：（请与上对照！）
+//自行包含头文件
+void MyFun(int x);    //此处的申明也可写成：void MyFun( int );
+typedef void (*FunType)(int );   //这样只是定义一个函数指针类型
+FunType FunP;              //然后用FunType类型来申明全局FunP变量
+
+int main(int argc, char* argv[])
+{
+//FunType FunP;    //函数指针变量当然也是可以是局部的 ，那就请在这里申明了。
+   MyFun(10);     
+   FunP=&MyFun;  
+   (*FunP)(20);   
+
+      return 0;
+}
+
+void MyFun(int x)  
+{
+   printf(“%d\n”,x);
+}
+
+看黑体部分：
+首先，在void (*FunType)(int ); 前加了一个typedef 。这样只是定义一个名为FunType函数指针类型，而不是一个FunType变量。
+然后，FunType FunP;  这句就如PINT px;一样地申明一个FunP变量。
+其它相同。整个程序完成了相同的事。
+这样做法的好处是：
+有了FunType类型后，我们就可以同样地、很方便地用FunType类型来申明多个同类型的函数指针变量了。如下：
+FunType FunP2;
+FunType FunP3;
+//……
+
+六 函数指针作为某个函数的参数
+既然函数指针变量是一个变量，当然也可以作为某个函数的参数来使用的。所以，你还应知道函数指针是如何作为某个函数的参数来传递使用的。
+给你一个实例：
+要求：我要设计一个CallMyFun函数，这个函数可以通过参数中的函数指针值不同来分别调用MyFun1、MyFun2、MyFun3这三个函数（注：这三个函数的定义格式应相同）。
+实现：代码如下：
+//自行包含头文件
+void MyFun1(int x);  
+void MyFun2(int x);  
+void MyFun3(int x);  
+typedef void (*FunType)(int ); //②. 定义一个函数指针类型FunType,与①函数类型一至
+void CallMyFun(FunType fp,int x);
+
+int main(int argc, char* argv[])
+{
+   CallMyFun(MyFun1,10);   //⑤. 通过CallMyFun函数分别调用三个不同的函数
+   CallMyFun(MyFun2,20);   
+   CallMyFun(MyFun3,30);   
+}
+void CallMyFun(FunType fp,int x) //③. 参数fp的类型是FunType。
+{
+  fp(x);//④. 通过fp的指针执行传递进来的函数，注意fp所指的函数是有一个参数的
+}
+void MyFun1(int x) // ①. 这是个有一个参数的函数，以下两个函数也相同
+{
+   printf(“函数MyFun1中输出：%d\n”,x);
+}
+void MyFun2(int x)  
+{
+   printf(“函数MyFun2中输出：%d\n”,x);
+}
+void MyFun3(int x)  
+{
+   printf(“函数MyFun3中输出：%d\n”,x);
+}

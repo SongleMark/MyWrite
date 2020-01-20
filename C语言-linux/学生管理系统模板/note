@@ -1,0 +1,22 @@
+
+
+/*
+
+	struct student
+	{
+		int iId;
+		char caName[32];
+		char caPwd[16];
+		float fChinese;
+		float fMath;
+		float fEnglish;
+	};
+	
+	//注册
+	//登录
+	  查找学生（学号），添加学生信息，修改密码，
+	  输入密码超过3次自动退出，显示学生信息，              	   比较成绩（数学) , 退出
+
+	//退出
+
+*/
